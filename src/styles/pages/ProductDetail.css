@@ -1,0 +1,202 @@
+/* ------- * NAVIGATE BACK BUTTON * ------- */
+.back__btn {
+  margin: 1rem 0 2rem 1rem;
+  font-size: var(--base-font-size);
+  opacity: 60%;
+}
+.detail__wrapper {
+  margin: 0 1rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product_detail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3.875rem;
+  row-gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.product_detail-image {
+  width: 80%;
+  height: 312px;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--secondary);
+}
+
+.product_detail-data,
+.product_detail-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 1rem;
+}
+
+.product_detail-data hr {
+  margin: 0;
+  width: 100%;
+}
+
+.product_detail-name {
+  font-size: var(--h3-font-size);
+  font-family: var(--font-rubik);
+}
+.product_detail-value,
+.product_detail-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.detail_buy-value {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  margin-block: 0.5rem;
+}
+.product_detail-discount,
+.product_detail-price {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+/* Product is on discount */
+.product_detail-card[data-discount="true"] .product_detail-price {
+  text-decoration: line-through;
+  font-size: var(--base-font-size);
+  opacity: 50%;
+}
+
+.product_detail-dispercent {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--discount);
+  font-size: var(--small-font-size);
+  color: var(--discount-foreground);
+  font-weight: var(--font-medium);
+  border-radius: 1rem;
+}
+
+/* Product is not on discount */
+.product_detail-card[data-discount="false"] .product_detail-discount,
+.product_detail-card[data-discount="false"] .product_detail-dispercent {
+  display: none;
+}
+
+.product_detail-description {
+  font-size: var(--small-font-size);
+  opacity: 60%;
+  line-height: 1.125rem;
+  text-align: left;
+}
+/* ------- * SIZE SELECTOR * ------- */
+.product_choose-size {
+  margin-bottom: 1rem;
+}
+.product_choose-size h6 {
+  font-size: var(--small-font-size);
+  opacity: 60%;
+  font-weight: var(--font-medium);
+  margin-bottom: 1rem;
+}
+.product__sizes {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.radio__input {
+  display: none;
+}
+.radio__input:checked + label {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+.radio__label {
+  padding: 0.375rem 1rem;
+  background-color: var(--secondary);
+  border-radius: 5rem;
+  font-size: var(--small-font-size);
+  cursor: pointer;
+}
+/* ------- * QUANTITY SELECTOR * ------- */
+
+.product__quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+.product_qty-input {
+  width: 4rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid hsla(var(--border), 0.2);
+  border-radius: 0.375rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+.product__instock {
+  font-size: var(--small-font-size);
+  opacity: 60%;
+}
+
+.product_add-cart {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--small-font-size);
+}
+
+.product__outofstock {
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: var(--base-font-size);
+  color: var(--discount-foreground);
+}
+/* ========== MEDIA QUERIES ============ */
+
+/* ----- * TABLETS * ------ */
+@media (min-width: 768px) {
+  .back__btn {
+    margin: 0rem 0 2rem 7rem;
+  }
+  .detail__wrapper {
+    margin-inline: 7rem;
+  }
+
+  .product_detail-image {
+    width: 356px;
+    height: 416px;
+  }
+  .product_detail-name {
+    font-size: var(--big-font-size);
+  }
+  .product__quantity {
+    column-gap: 0.5rem;
+  }
+  .product_add-cart {
+    padding: 0.625rem 1.75rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+  }
+}
+
+/* -------- * LARGER DEVICES * --------- */
+
+@media (min-width: 1024px) {
+  .detail__wrapper {
+    margin: 0 7rem;
+  }
+  .product_detail-card {
+    flex-direction: row;
+    align-items: start;
+    padding-inline: 10rem;
+  }
+  .product_detail-data {
+    width: 65%;
+  }
+  .product_add-cart {
+    padding: 0.75rem 2.375rem;
+  }
+}

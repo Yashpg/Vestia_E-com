@@ -1,0 +1,208 @@
+.cart__section,
+.aside {
+  margin-inline: 1rem;
+  margin-block: 2rem;
+}
+.cart_section-title {
+  font-size: var(--h2-font-size);
+  font-family: var(--font-rubik);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.order__items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 12.5rem;
+  row-gap: 1.5rem;
+  padding: 0.875rem;
+  border: 1px solid hsla(var(--border), 0.1);
+  border-radius: 0.875rem;
+}
+
+.order__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsla(var(--border), 0.1);
+}
+
+/* Remove border for the last order item */
+.order__item:last-child {
+  border-bottom: none;
+}
+
+.order_item-image {
+  width: 200px;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.order_item-summary,
+.order_item-details {
+  width: 100%;
+}
+
+/* Truncated product name for better UX */
+.order_item-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+}
+
+/* Meta details of the order */
+.order_item-meta {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.order_item-remove {
+  font-size: 1.2rem;
+  color: var(--discount-foreground);
+}
+.order_item-remove:hover {
+  color: var(--foreground);
+}
+
+.order_item-size,
+.order_item-category {
+  font-size: var(--small-font-size);
+  opacity: 60%;
+  margin-top: 0.25rem;
+}
+
+/* Purchase section of the order item */
+.order_item-purchase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.order_item-price,
+.order_item-disPrice {
+  font-size: var(--base-font-size);
+  font-weight: var(--font-medium);
+}
+.order_item-quantity {
+  font-size: var(--small-font-size);
+  opacity: 60%;
+}
+/* Handle sale product pricing */
+.order__item[data-discount="true"] .order_item-price {
+  text-decoration: line-through;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  opacity: 40%;
+}
+/* Hide sale price for non-sale items */
+.order__item[data-discount="false"] .order_item-disPrice {
+  display: none;
+}
+
+/* ======== ORDER SUMMERY =========  */
+.order__check {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: center;
+  border: 1px solid hsla(var(--border), 0.1);
+  border-radius: 0.875rem;
+  text-align: left;
+}
+
+.order__summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.summary__item {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsla(var(--border), 0.1);
+}
+
+/* Remove border for the last summary item */
+.summary__item:last-child {
+  border-bottom: none;
+}
+.summary__item div p {
+  opacity: 60%;
+}
+.summary__item span {
+  font-weight: 600;
+}
+.total__discount span {
+  color: var(--discount-foreground);
+}
+.order__btn {
+  padding: 0.75rem 4.5rem;
+}
+/* ========== MEDIA QUERIES ============ */
+
+/* ----- * Tablets * ------ */
+@media (min-width: 768px) {
+  .order__items {
+    row-gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .order__item {
+    column-gap: 1.5rem;
+  }
+  .order_item-image {
+    width: 100px;
+    height: 120px;
+  }
+  .order_item-name {
+    font-size: var(--base-font-size);
+    max-width: 70%;
+  }
+  .order_item-size,
+  .order_item-category {
+    margin-top: 0.5rem;
+  }
+  .order_item-price {
+    font-size: var(--base-font-size);
+  }
+}
+
+/* -------- * larger devices * --------- */
+@media (min-width: 1024px) {
+  .cart__main {
+    margin-inline: 7rem;
+  }
+  .cart__section {
+    float: left;
+    width: 55%;
+  }
+  /* ======== ORDER SUMMERY =========  */
+
+  .aside {
+    position: sticky;
+    top: 7rem;
+    margin-block: 6.5rem 0;
+    width: 35%;
+    float: right;
+  }
+}
+/* -------- * X-larger devices * --------- */
+@media (min-width: 1536px) {
+  .cart__section {
+    width: 55%;
+  }
+
+  .aside {
+    width: 40%;
+  }
+}
