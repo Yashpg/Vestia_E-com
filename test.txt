@@ -1,0 +1,228 @@
+  <!-- Loader -->
+        <div class="loader-container hide">
+          <span class="loader"></span>
+        </div>
+
+         <!-- Card 1 -->
+          <div class="product hide" data-sale-type="noSale">
+            <!-- Image | Name | Category -->
+            <a href="product-detail.html">
+              <!-- product_image -->
+              <div class="product-img">
+                <!-- <img src="./src/assets/t-shirt.png" alt="t-shirt" /> -->
+                <div class="no-img">Vestia</div>
+              </div>
+              <!-- product_info -->
+              <div class="product-info">
+                <p class="product-name">Majestic Mountain Graphic</p>
+                <span class="product-category">Men</span>
+              </div>
+            </a>
+            <!--  Price | Discount -->
+            <div class="product-purchase">
+              <!-- original Price | Discounted Price -->
+              <div class="product-prices">
+                <span class="product-dis_price">$120</span>
+                <span class="product-price">$170</span>
+              </div>
+              <span class="discount">-20%</span>
+            </div>
+          </div>
+
+
+
+// export const products = [
+//   {
+//     productId: "10001",
+//     name: "Classic Comfort Fit Joggers",
+//     description:
+//       "These joggers are designed to offer ultimate comfort and style. Crafted from a soft, breathable cotton blend, they are perfect for lounging at home, running errands, or light workouts. Featuring an elastic waistband with a drawstring, tapered legs, and side pockets for convenience, these joggers provide a relaxed yet trendy fit. Pair them with your favorite t-shirt or hoodie for a laid-back look.",
+//     price: 300,
+//     onSale: true,
+//     salePrice: 260,
+//     category: "men",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 10,
+//     images: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0641",
+//     tags: ["casual", "cotton", "comfortable"],
+//     discountPercent: 13,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10002",
+//     name: "Slim Fit Denim Jeans",
+//     description:
+//       "Elevate your wardrobe with these stylish slim-fit denim jeans. Designed to contour to your body while allowing freedom of movement, these jeans feature high-quality denim fabric that ensures durability and long-lasting color. With a classic five-pocket design and button fly, they are versatile enough for both casual outings and semi-formal occasions. Pair them with sneakers and a t-shirt for a modern look.",
+//     price: 500,
+//     onSale: false,
+//     salePrice: null,
+//     category: "men",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 15,
+//     images: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+//     tags: ["denim", "slim fit", "stylish"],
+//     discountPercent: 0,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10003",
+//     name: "Cotton Crew Neck T-Shirt",
+//     description:
+//       "Stay comfortable and stylish with this premium cotton crew neck t-shirt. Made from 100% pure cotton, this t-shirt offers unmatched breathability and softness, making it ideal for daily wear. The minimalist design and versatile color make it easy to pair with jeans, shorts, or joggers. It's perfect for layering under jackets or wearing on its own for a clean, casual look.",
+//     price: 200,
+//     onSale: true,
+//     salePrice: 180,
+//     category: "men",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 20,
+//     images: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
+//     tags: ["cotton", "t-shirt", "casual"],
+//     discountPercent: 10,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10004",
+//     name: "Leather Biker Jacket",
+//     description:
+//       "Exude confidence and style with this premium leather biker jacket. Made from high-quality leather, this jacket features a classic asymmetrical zipper design, metal hardware accents, and a comfortable inner lining. Perfect for chilly evenings or adding an edgy touch to your outfit, this jacket is a timeless addition to your wardrobe. Pair it with dark jeans and boots for a bold look.",
+//     price: 1500,
+//     onSale: false,
+//     salePrice: null,
+//     category: "men",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 5,
+//     images: "https://images.unsplash.com/photo-1618354691080-5c054d0c26af",
+//     tags: ["leather", "biker", "premium"],
+//     discountPercent: 0,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10005",
+//     name: "Chino Pants",
+//     description:
+//       "A wardrobe essential, these chino pants are the perfect blend of comfort and style. Crafted from a durable cotton fabric with a slight stretch, these pants offer all-day comfort. Their sleek design makes them suitable for both formal and casual settings. Dress them up with a button-down shirt and loafers, or keep it casual with a t-shirt and sneakers.",
+//     price: 400,
+//     onSale: true,
+//     salePrice: 350,
+//     category: "men",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 12,
+//     images: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+//     tags: ["chino", "pants", "versatile"],
+//     discountPercent: 12.5,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10006",
+//     name: "Floral Maxi Dress",
+//     description:
+//       "This elegant floral maxi dress is perfect for summer outings, beach vacations, or casual gatherings. Made from lightweight, breathable fabric, it features a flattering silhouette, adjustable straps, and a flowy hemline. Pair it with sandals and a sunhat for a chic summer look.",
+//     price: 600,
+//     onSale: true,
+//     salePrice: 540,
+//     category: "women",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 8,
+//     images: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb",
+//     tags: ["floral", "dress", "elegant"],
+//     discountPercent: 10,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10007",
+//     name: "Girls' Ruffled Sleeve Top",
+//     description:
+//       "A cute and comfortable ruffled sleeve top for girls. Made from 100% cotton, this top features a round neck, ruffled sleeves, and a vibrant print. Perfect for pairing with shorts or skirts for a fun and playful look.",
+//     price: 250,
+//     onSale: true,
+//     salePrice: 225,
+//     category: "girls",
+//     sizes: ["sm", "md", "l"],
+//     stock: 10,
+//     images: "https://images.unsplash.com/photo-1589479947919-0d93f5d59b28",
+//     tags: ["girls", "top", "cotton"],
+//     discountPercent: 10,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10008",
+//     name: "Boys' Graphic T-Shirt",
+//     description:
+//       "This vibrant graphic t-shirt is a fun addition to any boy's wardrobe. Featuring a bold design, it is made from soft, breathable cotton for all-day comfort. Ideal for casual outings or playdates.",
+//     price: 300,
+//     onSale: false,
+//     salePrice: null,
+//     category: "boys",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 12,
+//     images: "https://images.unsplash.com/photo-1600180758890-e3ed38a91f57",
+//     tags: ["graphic", "t-shirt", "boys"],
+//     discountPercent: 0,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10009",
+//     name: "Women's Activewear Leggings",
+//     description:
+//       "Designed for comfort and performance, these activewear leggings are perfect for workouts or casual wear. Made from a moisture-wicking, stretchy fabric, they feature a high waistband and a sleek fit for support and style.",
+//     price: 400,
+//     onSale: true,
+//     salePrice: 360,
+//     category: "women",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 14,
+//     images: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0641",
+//     tags: ["activewear", "leggings", "women"],
+//     discountPercent: 10,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10010",
+//     name: "Boys' Cargo Shorts",
+//     description:
+//       "Practical and stylish, these boys' cargo shorts are perfect for outdoor adventures. Made from durable fabric, they feature multiple pockets for storage and an adjustable waistband for a comfortable fit.",
+//     price: 350,
+//     onSale: false,
+//     salePrice: null,
+//     category: "boys",
+//     sizes: ["sm", "md", "l"],
+//     stock: 10,
+//     images: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
+
+//     tags: ["cargo", "shorts", "boys"],
+//     discountPercent: 0,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10011",
+//     name: "Women's Trench Coat",
+//     description:
+//       "This timeless trench coat is a must-have for any wardrobe. Featuring a classic double-breasted design, belted waist, and water-resistant fabric, it is perfect for layering over dresses or pants during cooler weather.",
+//     price: 1200,
+//     onSale: true,
+//     salePrice: 1080,
+//     category: "women",
+//     sizes: ["sm", "md", "l", "xl"],
+//     stock: 6,
+//     images: "https://images.unsplash.com/photo-1589479947919-0d93f5d59b28",
+//     tags: ["trench coat", "women", "classic"],
+//     discountPercent: 10,
+//     createdAt: "2025-01-13",
+//   },
+//   {
+//     productId: "10012",
+//     name: "Girls' Denim Skirt",
+//     description:
+//       "A stylish and versatile denim skirt for girls. Made from soft denim fabric, it features a classic button and zip closure, front and back pockets, and a comfortable fit. Perfect for pairing with tops or sweaters for various occasions.",
+//     price: 400,
+//     onSale: false,
+//     salePrice: null,
+//     category: "girls",
+//     sizes: ["sm", "md", "l"],
+//     stock: 8,
+//     images: "https://images.unsplash.com/photo-1576176376371-df99eebf3a9c",
+//     tags: ["denim", "skirt", "girls"],
+//     discountPercent: 0,
+//     createdAt: "2025-01-13",
+//   },
+// ];

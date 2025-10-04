@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vestia</title>
+    <!-- ======== FAVICON ======== -->
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- ======== STYLES FILE ======== -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- ===== ICON LIBRARY ====== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+      <nav class="nav">
+        <!-- Logo -->
+        <a href="/" class="nav__logo"> Vestia </a>
+        <div class="nav__action">
+          <!-- Cart -->
+          <a href="cart.html" class="cart__bth">
+            <span class="item__counter">0</span>
+            <i class="ri-shopping-cart-2-line"></i>
+          </a>
+          <!-- User Register Btn  -->
+          <button
+            class="register__open-btn"
+            id="register_open-btn"
+            popovertarget="register__dialog"
+          >
+            <span class="registerIn primary__btn" id="register-In"
+              >Register</span
+            >
+            <i class="ri-user-3-line hide__element" id="user-Icon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== REGISTER ========== -->
+    <dialog class="register__dialog" id="register-dialog">
+      <div class="dialog__wrapper">
+        <!-- Header -->
+        <div class="dialog__header">
+          <h5 class="register__title">Register with Vestia</h5>
+          <span class="register__subtitle">
+            Unlock a world of fashion, discounts, and surprises!</span
+          >
+          <!-- Close Btn -->
+          <button class="close__dialog" id="close-dialog" autofocus>
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <!-- Content -->
+        <div class="dialog__content">
+          <label for="register_input">Email address</label>
+          <input
+            type="email"
+            placeholder="email"
+            name="register_input"
+            class="register__input"
+            id="register-input"
+          />
+        </div>
+        <!-- Btn -->
+        <button class="register__btn primary__btn" id="register-btn">
+          Register
+        </button>
+      </div>
+    </dialog>
+
+    <!-- ========== MAIN ========== -->
+    <main class="main">
+      <!-- HERO SECTION -->
+      <section class="hero__section" id="hero-section">
+        <div class="hero__container container">
+          <!-- Title & Description -->
+          <div class="hero__data">
+            <h1 class="hero__title">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <p class="hero__description">
+              Browse through our diverse range of meticulously crafted garments,
+              designed to bring out your individuality and cater to your sense
+              of style.
+            </p>
+          </div>
+
+          <a href="#arrival-section" class="hero__btn primary__btn">Shop Now</a>
+
+          <!-- Brand , Product & Customer Counts -->
+          <div class="counters">
+            <!-- Brand Count  -->
+            <div class="count__brands counter">
+              <h4 class="count__num">200+</h4>
+              <span class="count__info">International Brands</span>
+            </div>
+            <!-- Product Count  -->
+            <div class="count__products counter">
+              <h4 class="count__num">1,000+</h4>
+              <span class="count__info">High-Quality Products</span>
+            </div>
+            <!-- Customers Count  -->
+            <div class="count__customers counter">
+              <h4 class="count__num">10,000+</h4>
+              <span class="count__info">Happy Customers</span>
+            </div>
+          </div>
+
+          <!-- Decorative Stars  -->
+          <img src="src/assets/Star.svg" alt="star1" class="hero_star-1" />
+          <img src="src/assets/Star.svg" alt="star2" class="hero_star-2" />
+        </div>
+      </section>
+
+      <!-- NEW ARRIVAL SECTION -->
+      <section class="arrival__section product__section" id="arrival-section">
+        <h2 class="section__title">New Arrival</h2>
+        <div class="product__wrapper" id="arrival-container">
+          <!-- new arrival will be dynamically added here -->
+        </div>
+      </section>
+      <hr />
+      <!-- MEN'S WEAR SECTION -->
+      <section class="menwear__section product__section" id="menwear-section">
+        <h2 class="section__title">Men's Wear</h2>
+        <div class="product__wrapper" id="menwear-container">
+          <!-- Men's wear will be dynamically added here -->
+        </div>
+      </section>
+      <hr />
+      <!-- WOMEN'S WEAR SECTION -->
+      <section
+        class="womenwear__section product__section"
+        id="womenwear-section"
+      >
+        <h2 class="section__title">Women's Wear</h2>
+        <div class="product__wrapper" id="womenwear-container">
+          <!-- Women's wear will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Logo -->
+        <div class="footer__data">
+          <a href="/" class="footer__logo"> Vestia </a>
+          <span class="footer__description">
+            We have clothes that suit your style and which you’re proud to wear.
+          </span>
+          <!-- Social Media Links -->
+          <div class="social__links">
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-facebook-line"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </div>
+          <hr />
+          <!-- CopyRight -->
+          <p class="footer__copyright">
+            Vestia ©2024-2025, All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========== JAVASCRIPT FILE ============= -->
+    <script src="./src/scripts/main.js" type="module"></script>
+  </body>
+</html>
